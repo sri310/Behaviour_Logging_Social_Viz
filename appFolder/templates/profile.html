@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>  Hello, {{current_user.username }} </h3><br>
+     <div style="display:none;" id="userid">{{id}}</div>
+    <h4>  You your last login time was :  {{ current_user.last_login }}</h4>
+    <br><br>
+    Click the link below to go to a stackoverflow page.
+    <a href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15" target="_blank">Link</a><br><br>
+
+    <h4>Activity logs</h4>
+    <button id="mybutton" style="float:right;">Refresh Table</button>
+    <div id ="tablediv" style="width:800px;height:500px;overflow:auto"></div><br><br>
+
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/table.js"></script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h4> User interactions logged: </h4>
+    <ol>
+        <li> <b>Up/DownVote</b>: clicking on the up or down vote button in any stack over flow page</li>
+        <li> <b>Comment</b>: Clicking on "add a comment: hyperlink is considered as a comment as stack overflow does not provide access
+        to the text box for commenting unless the user is logged in</li>
+        <li><b>Bookmark</b> : Bookmarking any stack overflow page is considered as a bookmark action</li>
+        <li><b>Post</b> : Writing some text in the post textbox and clicking on the "Post your answer" button is
+        considered as a Post action</li>
+        <li><b>Search</b>: Typing something in the small searchbox on the top of the stackoverflow page and clicking the search button is
+        considered as a search action</li>
+    </ol>
+    <h4>Why did you decide to log these actions?</h4>
+    <p>Each of these actions signify different levels of user interactions. An up/down vote is a simple button click and even
+    a basic user of the website will likely do it. Comments and Posts signify a more advanced level of user interaction. A user who is
+    very active in the stackoverflow community tend to comment a lot and only an expert user posts answer. These user actions will help to
+    identify those users. Bookmarking and searching are typical actions of a learner who is using stackoverflow to clear his/her doubts. These
+    two action will help to identify the beginners in the community.</p>
+    <h4>Analysis and findings</h4>
+    <h6>Patterns</h6>
+    <ul>
+        <li>Of the 3 users , two of them have more upvotes than downvotes</li>
+        <li>In general all users perform up/down voting more than any activity. On an average voting constitutes 45% of the user
+        activity</li>
+        <li>Among the more advanced user interactions, commenting comes first. 17% of the average user activity is comments</li>
+        <li>Posts are the least recorded user activity.</li>
+        <li>Users who search also bookmark proportionally.</li>
+
+    </ul>
+
+    <h6>Pattern explanation</h6>
+    <p>The first pattern shows that more users upvote than downvote. This happens because when a user finds a satisfactory answer
+    they are happy and don't mind expressing their gratitude whereas when they don't get the answer they are looking for they don't
+    have time to wait and downvote an answer. Second pattern proves that voting is the most popular user activity. This is true because voting
+    is just a button click and doesn't take the user much time to do it. Third pattern shows that commenting comes second in the ranking
+    of popular user activities. Comments help users clear additinal doubts and provide more explanation about a question/answer. Often it
+    is the only method of communication among users and so this why users comment a lot. Posting an answer is the last ranked user activity
+    because writing answer requires expert knowledge and evne expert users can't answer all questions. Fifth pattern shows that users who
+    search a lot also bookmark proportionally. This pattern can easitly identify seekers or learners in a communtiy.</p>
+    <h6>Steps to find the result and why it matters</h6>
+    <p>I wrote a chrome extension that tracks the user activites on any stackoverflow page and inserted the results into a
+    database. Later, I extracted the values and created interactive visualization to analyse the patterns. This is important because,
+    it can help identify the characteristics of different users and different groups of users and help a developer build websites that can
+    adapt to differernt types of users.</p>
+{% endblock %}

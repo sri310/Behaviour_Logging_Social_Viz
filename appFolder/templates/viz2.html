@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+    <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="static/js/d3.v3.min.js"></script>
+    <h3>Social visualizations: </h3>
+    <br>
+    Comparison of major user interactions between the three users. This donut chart shows the distribution of differnt types of user
+    activities. Hovering/Clicking on each type will show you the number of such user actvities and it percentage.
+    <br><br><br><br>
+    <div id = "donut" style="width:1000px;height:500px; margin-top:0px"></div>
+    <script type="text/javascript" src="static/js/donut_chart.js"></script>
+
+{% endblock %}
